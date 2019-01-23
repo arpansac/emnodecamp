@@ -1,0 +1,15 @@
+{
+  "name": "eventmanagernode",
+  "version": "1.0.0",
+  "description": "A mini event manager app with the options to create event, add registrations and session details, front end will be created on Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arpansac",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.6"
+  }
+}
