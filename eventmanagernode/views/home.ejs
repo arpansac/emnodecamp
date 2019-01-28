@@ -29,6 +29,7 @@
                             <% if (event.date){ %>
                             <p><%= event.date.toLocaleString() %></p>
                             <%}%>
+                            <%= event.registrations.length %> Registrations
                             <p><%= event.description %></p>
                         </div>
                     </li>
