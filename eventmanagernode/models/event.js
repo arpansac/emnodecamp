@@ -11,18 +11,7 @@ const eventSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    sessions: [
-        {
-            title: String,
-            description: String,
-            date: Date
-        }
-    ],
-    comments: [
-        {
-            content: String
-        }
-    ],
+    date: Date,
     registrations: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -35,6 +24,6 @@ const eventSchema = new mongoose.Schema({
 });
 
 
-const Event = mongoose.model('Event', eventSchema); 
+const Event = mongoose.model('Event', eventSchema);
 
 module.exports = Event;

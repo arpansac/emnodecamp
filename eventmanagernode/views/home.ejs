@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Event Manager</h1>
+        
+        <div id="new-event-form-container">
+            <form action="/events/create" method="POST">
+                <fieldset>
+                    <input type="text" name="title" placeholder="Event Name">
+                </fieldset>
+                <fieldset>
+                    <textarea name="description" id="" cols="30" rows="10" placeholder="Event Description"></textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="datetime-local" name="date">
+                </fieldset>
+                <input type="submit" value="Create Event">
+            </form>
+        </div>
+        <div id="events-list-container">
+            <ul>
+                <% for (event of events){ %>
+                
+                    <li>
+                        <div>
+                            <h3><%= event.title %></h3>
+                            <% if (event.date){ %>
+                            <p><%= event.date.toLocaleString() %></p>
+                            <%}%>
+                            <p><%= event.description %></p>
+                        </div>
+                    </li>
+                    
+                <% } %>
+            </ul>
+        </div>
+
+    </body>
+</html>
